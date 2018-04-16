@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<pthread.h>
+
+void *fun1();
+
+int main()
+{
+	pthread_t thread1;
+	pthread_create(&thread1, NULL, fun1, NULL);
+
+	pthread_join(thread1, NULL);
+	
+}
+
+void *fun1()
+{
+	int n1,j,c=0;
+	printf("Enter A Number");
+	scanf("%d",&n1);
+	for(j=1;j<=n;j++)
+	if(n%j==0)
+	{
+		c++;
+	}
+	if(c==0)
+	printf("Prime"0);
+	else 
+	print("Not Prime")
+}
